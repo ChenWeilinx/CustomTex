@@ -83,6 +83,7 @@
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/style.css">
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -241,23 +242,34 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">CustomTex: High-fidelity Indoor Scene Texturing via Multi-Reference
+               Customization</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                Weilin Chen,
+              </span>
+              <span class="author-block">
+                Jiahao Rao,
+              </span>
+              <span class="author-block">
+                Wenhao Wang,
+              </span>
+              <span class="author-block">
+                Xinyang Li,
+              </span>
+              <span class="author-block">
+                Xuan Cheng<sup>*</sup>,
+              </span>
+              <span class="author-block">
+                Liujuan Cao
+              </span>
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
+                    <span class="author-block">MAC Lab, Xiamen University<br>arXiv 2025</span>
                     <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -274,7 +286,7 @@
                     </span>
 
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -282,7 +294,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
@@ -295,16 +307,6 @@
                   </a>
                 </span>
 
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -314,22 +316,38 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser image -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
+      <img src="static/images/teaser.png"
+           alt="Teaser image"
+           style="width:100%; height:auto;">
+      <h2 class="subtitle has-text-centered">
+        CustomTex is capable of generating high-fidelity texture for a 3D scene mesh, driven by instance-specific reference images.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      TODO: Replace with your teaser video
       <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
+        TODO: Add your video file path here
         <source src="static/videos/banner_video.mp4" type="video/mp4">
       </video>
-      <!-- TODO: Replace with your video description -->
+      TODO: Replace with your video description
       <h2 class="subtitle has-text-centered">
         Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -341,8 +359,41 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            The creation of <strong>high-fidelity, customizable 3D indoor scene textures</strong>
+            remains a significant challenge. While
+            <span class="has-text-weight-bold">text-driven methods</span> offer flexibility,
+            they often lack the precision required for
+            <strong>fine-grained, instance-level control</strong>, and tend to produce textures
+            with artifacts and <span class="highlight">baked-in shading</span>.
+            To overcome these limitations, we introduce
+            <span class="highlight-strong">CustomTex</span>, a novel framework for
+            <strong>instance-level, high-fidelity scene texturing</strong> driven by
+            <span class="has-text-weight-bold">reference images</span>.
+            CustomTex takes an untextured 3D scene together with reference images specifying
+            the desired appearance for each object instance, and generates a
+            <strong>unified, high-resolution texture map</strong>.
+            The core of our method is a
+            <span class="highlight">dual-distillation approach</span> that decouples
+            <strong>semantic control</strong> from
+            <strong>pixel-level enhancement</strong>.
+            We employ <span class="has-text-weight-bold">semantic-level distillation</span>,
+            equipped with <strong>instance-aware cross attention</strong>, to ensure semantic
+            plausibility and <em>reference-instance alignment</em>, and
+            <span class="has-text-weight-bold">pixel-level distillation</span> to enforce
+            high visual fidelity.
+            Both are unified within a
+            <strong>Variational Score Distillation (VSD)</strong> optimization framework.
+            Experiments demonstrate that <strong>CustomTex</strong> achieves
+            <span class="highlight">precise instance-level consistency</span> with reference
+            images and produces textures with
+            <strong>superior sharpness</strong>,
+            <strong>reduced artifacts</strong>, and
+            <strong>minimal baked-in shading</strong> compared to state-of-the-art methods.
+            Our work establishes a more
+            <span class="highlight-strong">direct and user-friendly</span> path to
+            high-quality, customizable 3D scene appearance editing.
           </p>
+          
         </div>
       </div>
     </div>
@@ -351,38 +402,66 @@
 <!-- End paper abstract -->
 
 
+<!-- Method overview -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method Overview</h2>
+
+        <!-- Pipeline figure -->
+        <div class="content has-text-centered">
+          <img src="static/images/pipeline.jpg"
+               alt="Method overview of CustomTex"
+               style="width:150%; height:auto;">
+        </div>
+
+        <!-- Method description -->
+        <div class="content has-text-justified">
+          <p>
+            <strong>Pipeline of CustomTex.</strong> CustomTex textures a complete 3D indoor scene by optimizing a texture map in UV space through a dual-distillation training approach. In each iteration, the 3D scene with optimized texture is rendered from a random viewpoint, producing an RGB image, a depth map and instance masks. Instance masks are used to align each reference image's features with the correct object instance in the rendered RGB image via a specialized cross-attention. The Variational Score Distillation gradient and the Super-Resolution gradient are computed based on the well-aligned reference images condition to update the texture field.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End method overview -->
+
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3">Image carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
+        <img src="static/images/ours1_reduced.png" alt="First research result visualization" loading="lazy"/>
         <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
-          First image description.
+          The "living room" texture generated by our method is rendered into 2,000 &times; 2,000 resolution image.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <img src="static/images/ours2_reduced.png" alt="Second research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          The "living room" texture generated by our method is rendered into 2,000 &times; 2,000 resolution image.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
+        <img src="static/images/ours3_reduced.png" alt="Third research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+          The "bedroom" texture generated by our method is rendered into 2,000 &times; 2,000 resolution image.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
+      <img src="static/images/ours4_reduced.png" alt="Fourth research result visualization" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        The "bedroom" texture generated by our method is rendered into 2,000 &times; 2,000 resolution image.
       </h2>
     </div>
   </div>
@@ -454,18 +533,18 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h2 class="title">Poster</h2> -->
 
       <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+      <!-- <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
           </iframe>
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
