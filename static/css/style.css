@@ -1,3 +1,29 @@
+.hero-bg {
+    background-image: url("../images/x.png");
+    background-size: 100%;        /* 填满 */
+    background-position: center;   /* 居中 */
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  .hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.65); /* 白色柔和遮罩 */
+    z-index: 0;
+  }
+  
+  .hero-bg .hero-body {
+    position: relative;
+    z-index: 1;
+  }
+  
+
+/* ================================
+   Abstract
+   ================================ */
+
 .highlight {
     background: rgba(255, 221, 87, 0.25);
     padding: 0.1em 0.3em;
@@ -11,40 +37,19 @@ border-radius: 5px;
 font-weight: 600;
 }
 
+.highlight-blue {
+    background: rgba(72, 95, 199, 0.22);
+    padding: 0.12em 0.32em;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  
+
 .video-ours {
 outline: 3px solid #48c78e; /* Bulma green */
 outline-offset: -3px;
 }
 
-/* ================================
-   Unified emphasis system
-   ================================ */
-
-/* Level 1: Core concepts / method names */
-.emph-primary {
-    background: rgba(72, 199, 142, 0.22); /* Bulma green */
-    padding: 0.15em 0.35em;
-    border-radius: 5px;
-    font-weight: 600;
-  }
-  
-  /* Level 2: Important technical terms */
-  .emph-secondary {
-    font-weight: 600;
-  }
-  
-  /* Level 3: Numbers / results / comparison */
-  .emph-tertiary {
-    color: #3273dc; /* Bulma blue */
-    font-weight: 500;
-  }
-  
-  /* Optional: smooth appearance */
-  .emph-primary,
-  .emph-secondary,
-  .emph-tertiary {
-    transition: all 0.15s ease-in-out;
-  }
 
   /* ================================
    Scene carouse(Reference + Video)

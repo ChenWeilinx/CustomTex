@@ -190,7 +190,7 @@
   
 
   <main id="main-content">
-  <section class="hero">
+  <section class="hero hero-bg">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
@@ -318,18 +318,20 @@
             <span class="has-text-weight-bold">text-driven methods</span> offer flexibility,
             they often lack the precision required for
             <strong>fine-grained, instance-level control</strong>, and tend to produce textures
-            with artifacts and <span class="highlight">baked-in shading</span>.
+            with artifacts and baked-in shading.
+            
             To overcome these limitations, we introduce
-            <span class="highlight-strong">CustomTex</span>, a novel framework for
+            <span class="highlight-strong">CustomTex, a novel framework for
             <strong>instance-level, high-fidelity scene texturing</strong> driven by
-            <span class="has-text-weight-bold">reference images</span>.
+            <span class="has-text-weight-bold">reference images</span>.</span>
+            
             CustomTex takes an untextured 3D scene together with reference images specifying
             the desired appearance for each object instance, and generates a
             <strong>unified, high-resolution texture map</strong>.
-            The core of our method is a
-            <span class="highlight">dual-distillation approach</span> that decouples
+            <span class="highlight">The core of our method is a
+              <strong>dual-distillation approach</strong> that decouples
             <strong>semantic control</strong> from
-            <strong>pixel-level enhancement</strong>.
+            <strong>pixel-level enhancement</strong>.</span>
             We employ <span class="has-text-weight-bold">semantic-level distillation</span>,
             equipped with <strong>instance-aware cross attention</strong>, to ensure semantic
             plausibility and <em>reference-instance alignment</em>, and
@@ -337,15 +339,16 @@
             high visual fidelity.
             Both are unified within a
             <strong>Variational Score Distillation (VSD)</strong> optimization framework.
-            Experiments demonstrate that <strong>CustomTex</strong> achieves
-            <span class="highlight">precise instance-level consistency</span> with reference
+
+            <span class="highlight-blue">Experiments demonstrate that <strong>CustomTex</strong> achieves
+            precise instance-level consistency with reference
             images and produces textures with
             <strong>superior sharpness</strong>,
             <strong>reduced artifacts</strong>, and
-            <strong>minimal baked-in shading</strong> compared to state-of-the-art methods.
+            <strong>minimal baked-in shading</strong> compared to state-of-the-art methods.</span>
             Our work establishes a more
             <span class="highlight-strong">direct and user-friendly</span> path to
-            high-quality, customizable 3D scene appearance editing.
+            <span class="highlight-strong">high-quality, customizable</span> 3D scene appearance editing.
           </p>
           
         </div>
@@ -843,7 +846,7 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            Thanks to Chen Bin(陈彬) for helping with the video rendering.
+            We sincerely thank <strong>Bin Chen (陈彬)</strong> for his valuable assistance with video rendering and visualization.
           </p>
 
           <p>
