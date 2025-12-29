@@ -4,13 +4,17 @@
     border-radius: 4px;
   }
   
-  .highlight-strong {
-    background: rgba(72, 199, 142, 0.25);
-    padding: 0.15em 0.35em;
-    border-radius: 5px;
-    font-weight: 600;
-  }
+.highlight-strong {
+background: rgba(72, 199, 142, 0.25);
+padding: 0.15em 0.35em;
+border-radius: 5px;
+font-weight: 600;
+}
 
+.video-ours {
+outline: 3px solid #48c78e; /* Bulma green */
+outline-offset: -3px;
+}
 
 /* ================================
    Unified emphasis system
@@ -40,5 +44,45 @@
   .emph-secondary,
   .emph-tertiary {
     transition: all 0.15s ease-in-out;
+  }
+
+  /* ================================
+   Scene carouse(Reference + Video)
+   ================================ */
+   #scene-carousel {
+    overflow: hidden;
+    padding: 1rem 0;
+  }
+  
+  #scene-carousel .item {
+    margin: 1rem;
+    overflow: hidden;
+    padding: 1.5rem;
+    font-size: 0;
+    background: var(--background-primary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+  }
+  
+  #scene-carousel .item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  #scene-carousel .item img,
+  #scene-carousel video {
+    margin: 0;
+    border-radius: var(--border-radius);
+    width: 100%;
+    height: auto;
+  }
+  
+  #scene-carousel .subtitle {
+    font-size: 1rem !important;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    font-weight: 500;
   }
   
